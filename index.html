@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>File Upload</title>
+<title>PyScript Website</title>
+<script src="https://pyscript.net/dist/pyscript.js"></script>
 </head>
 <body>
-<form action="/upload" method="post" enctype="multipart/form-data">
-  <input type="file" name="file">
-  <input type="submit" value="Upload">
-</form>
+<div id="container"></div>
+<script>
+const py = new PyScript({
+  element: document.getElementById("container")
+});
+
+py.eval("print('Hello, world!')");
+</script>
 </body>
 </html>
